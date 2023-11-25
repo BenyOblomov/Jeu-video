@@ -26,6 +26,7 @@ h1 {
 }
 
 #PVs {
+    visibility: hidden;
     position: absolute;
     top: 10vh;
     display: flex;

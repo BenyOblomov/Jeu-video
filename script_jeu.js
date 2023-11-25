@@ -73,6 +73,7 @@ video.addEventListener("ended", (event) => {
 
 
 go.addEventListener("click", (event) => {
+    document.getElementById("PVs").style.visibility = "visible";
     btn1.style.visibility = "hidden";
     btn2.style.visibility = "hidden";
     bandeau.style.visibility = "hidden";
