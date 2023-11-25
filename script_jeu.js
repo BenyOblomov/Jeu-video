@@ -14,9 +14,9 @@ function randomNumber(min, max) {
 }
 
 function barPV() {
-    document.getElementById("myBar").style.width = (MY_PV + "%");
+    document.getElementById("myBar").style.width = ((MY_PV * 2) + "%");
     document.getElementById("myBar").innerHTML = MY_PV;
-    document.getElementById("hisBar").style.width = (HIS_PV + "%");
+    document.getElementById("hisBar").style.width = ((HIS_PV * 2) + "%");
     document.getElementById("hisBar").innerHTML = HIS_PV;
 }
 
