@@ -16,8 +16,19 @@ function randomNumber(min, max) {
 function barPV() {
     document.getElementById("myBar").style.width = ((MY_PV * 2) + "%");
     document.getElementById("myBar").innerHTML = MY_PV;
+    if (MY_PV < 50) {
+        document.getElementById("myBar").style.borderRadius = "15px 0 0 15px";
+    } else {
+        document.getElementById("myBar").style.borderRadius = "15px";
+    }
     document.getElementById("hisBar").style.width = ((HIS_PV * 2) + "%");
     document.getElementById("hisBar").innerHTML = HIS_PV;
+    if (HIS_PV < 50) {
+        document.getElementById("hisBar").style.borderRadius = "15px 0 0 15px";
+    } else {
+        document.getElementById("hisBar").style.borderRadius = "15px";
+
+    }
 }
 
 function soins() {
@@ -35,11 +46,11 @@ function ennemy() {
         btn1.style.display = "none";
         btn2.style.display = "none";
         video.src = "videos/lose.mp4";
-        texte.innerHTML = "L'ennemi vous a terrassé ! Vous avez perdu ! 🪦";
+        texte.innerHTML = "L'ennemi vous a terrassé !<br>Vous avez perdu ! 🪦";
         barPV();
     } else {
     video.src = "videos/ennemy.mp4";
-    texte.innerHTML ="L'ennemi vous a infligé " + dégats_ennemis + " points de dégats. ⚔️ Il vous reste " + MY_PV + " points de vie. ♥️ Il reste " + HIS_PV + " points de vie à l'ennemi. ♥️ ";
+    texte.innerHTML ="L'ennemi vous a infligé " + dégats_ennemis + " points de dégats. ⚔️<br>Il vous reste " + MY_PV + " points de vie. ♥️<br>Il reste " + HIS_PV + " points de vie à l'ennemi. ♥️";
     barPV();
 }
 }
@@ -67,7 +78,7 @@ go.addEventListener("click", (event) => {
     bandeau.style.visibility = "hidden";
     video.src = "videos/Intro2.mp4"
     go.remove();
-    texte.innerHTML = "Souhaitez-vous attaquer ou vous soigner ? ";
+    texte.innerHTML = "Souhaitez-vous attaquer ou utiliser une potion ? ";
     display_block()
     }) 
 
@@ -107,7 +118,7 @@ btn1.addEventListener("click", (event) => {
         btn1.style.display = "none";
         btn2.style.display = "none";
         video.src = "videos/win.mp4";
-        texte.innerHTML = "L'ennemi est vaincu ! Bravo ! Vous avez gagné ! 🏆";
+        texte.innerHTML = "L'ennemi est vaincu !<br>Bravo ! Vous avez gagné ! 🏆";
         if (MY_PV <= 0) { 
             MY_PV = 1;
         }
@@ -117,10 +128,10 @@ btn1.addEventListener("click", (event) => {
         btn1.style.display = "none";
         btn2.style.display = "none";
         video.src = "videos/lose.mp4";
-        texte.innerHTML = "L'ennemi vous a terrassé ! Vous avez perdu ! 🪦";
+        texte.innerHTML = "L'ennemi vous a terrassé !<br>Vous avez perdu ! 🪦";
         barPV();
     } else {
-        texte.innerHTML = "Vous avez infligé "+ mes_dégats +" points de dégats à l'ennemi. ⚔️ L'ennemi vous a infligé " + dégats_ennemis + " points de dégats. ⚔️<br> Il vous reste " + MY_PV +" points de vie.♥️ Il reste " + HIS_PV +" points de vie à l'ennemi. ♥️";
+        texte.innerHTML = "Vous avez infligé "+ mes_dégats +" points de dégats à l'ennemi. ⚔️<br>L'ennemi vous a infligé " + dégats_ennemis + " points de dégats. ⚔️<br>Il vous reste " + MY_PV +" points de vie.♥️<br>Il reste " + HIS_PV +" points de vie à l'ennemi. ♥️";
         bandeau.style.visibility = "hidden";
         barPV();
         } 
