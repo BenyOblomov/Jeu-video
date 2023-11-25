@@ -33,7 +33,7 @@ function barPV() {
 
 function soins() {
     barPV()
-    texte.innerHTML = "Vous récupérez des points de vie. ♥️<br>Il vous reste " + nbre_de_potions + " potion(s) 🧪";
+    texte.innerHTML = "Vous récupérez " + potion + " points de vie. ♥️<br>Il vous reste " + nbre_de_potions + " potion(s) 🧪";
 }
 
 function ennemy() {
