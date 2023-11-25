@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin: auto;
+}
+
+h1 {
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+
+#ecran {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    width: 100vw;
+    height: 90vh;
+}
+
+#PVs {
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    width: 45vw;
+}
+
+#myProgress, #hisProgress {
+    background-color: rgb(191, 39, 39);
+    width: 300px;
+    height: 26px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#myBar, #hisBar {
+    width: 100%;
+    height: 25px;
+    background-color: rgb(89, 255, 47);
+    text-align: center;
+    line-height: 25px;
+    color: rgb(0, 0, 0);
+    border-radius: 10px 0 0 10px;
+  }
+
+
+
+#Intro {
+    top: 0;
+    height: 85%;
+    width: 60%;
+}
+
+#p1 {
+    font-size: 1.6em;
+    text-align: center;
+}
+
+#bandeau {
+    position: absolute;
+    bottom: 16vh;
+    height: 25%;
+    width: 48%;
+    background-color: rgb(207, 171, 53);  
+    border: 10px double black;
+    color: rgb(5, 5, 5);
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#divbuttons {
+    display: flex;
+    justify-content: center;
+}
+
+#go {
+  visibility: hidden;
+}
+
+#btn1, #btn2 {
+    display: none;
+    visibility: hidden;
+}
+
+.buttons {
+    font-size: 2em;
+    margin: 10px;
+}
+
+
+
+
